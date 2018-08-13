@@ -14,6 +14,7 @@
 		F19BB6E42121F8E10079B43F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19BB6E22121F8E10079B43F /* LaunchScreen.storyboard */; };
 		F19BB6E72121F8E10079B43F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BB6E62121F8E10079B43F /* main.m */; };
 		F19BB6F12121F8E20079B43F /* MyOwnScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BB6F02121F8E20079B43F /* MyOwnScrollViewTests.m */; };
+		F19BB6FD21221EB60079B43F /* MyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F19BB6FC21221EB60079B43F /* MyScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		F19BB6EC2121F8E20079B43F /* MyOwnScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyOwnScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19BB6F02121F8E20079B43F /* MyOwnScrollViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyOwnScrollViewTests.m; sourceTree = "<group>"; };
 		F19BB6F22121F8E20079B43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F19BB6FB21221EB60079B43F /* MyScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScrollView.h; sourceTree = "<group>"; };
+		F19BB6FC21221EB60079B43F /* MyScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				F19BB6DA2121F8E00079B43F /* ViewController.h */,
 				F19BB6DB2121F8E00079B43F /* ViewController.m */,
 				F19BB6DD2121F8E00079B43F /* Main.storyboard */,
+				F19BB6FB21221EB60079B43F /* MyScrollView.h */,
+				F19BB6FC21221EB60079B43F /* MyScrollView.m */,
 				F19BB6E02121F8E10079B43F /* Assets.xcassets */,
 				F19BB6E22121F8E10079B43F /* LaunchScreen.storyboard */,
 				F19BB6E52121F8E10079B43F /* Info.plist */,
@@ -204,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F19BB6DC2121F8E00079B43F /* ViewController.m in Sources */,
+				F19BB6FD21221EB60079B43F /* MyScrollView.m in Sources */,
 				F19BB6E72121F8E10079B43F /* main.m in Sources */,
 				F19BB6D92121F8E00079B43F /* AppDelegate.m in Sources */,
 			);

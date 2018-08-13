@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MyScrollView.h"
 
 @interface ViewController ()
 
@@ -24,8 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIView *framingView = [[UIView alloc] initWithFrame:self.view.frame];
-//    framingView.translatesAutoresizingMaskIntoConstraints = NO;
+    //create object of scroll view.....
+    MyScrollView *framingView = [[MyScrollView alloc] initWithFrame:self.view.frame];    
+    framingView.userInteractionEnabled = YES;
     framingView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:framingView];
     self.framingView = framingView;
