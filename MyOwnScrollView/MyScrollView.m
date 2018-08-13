@@ -42,10 +42,30 @@
 }
 
 - (void)frameViewPanned:(UIPanGestureRecognizer *)sender {
-    CGPoint translationInView = [sender translationInView:sender.view];
-    CGPoint newCenter = CGPointMake(self.center.x + translationInView.x, self.center.y + translationInView.y);
-    self.center = newCenter;
+    
+    CGPoint translationInView = [sender translationInView:self];
+    CGRect bounds = self.bounds; //grabs frameview size (height and width)
+    
+    CGFloat newX = bounds.origin.x - translationInView.x;
+    CGFloat minX = 0;
+    CGFloat maxX = self.contentSize.width - bounds.size.width;
+    CGFloat safeNewX = fmax(minX, fmin(newX, maxX));
+    
+    CGFloat newY = bounds.origin.y - translationInView.y;
+    CGFloat minY = 0;
+    CGFloat maxY = self.contentSize.height - bounds.size.height;
+    CGFloat safeNewY = fmax(minY, fmin(newY, maxY));
+    
+    
+    self.bounds = CGRectMake(safeNewX, safeNewY, self.bounds.size.width, self.bounds.size.height);
+    
     [sender setTranslation:CGPointZero inView:self];
+    
+//    Working Scroll/Pan
+//    CGPoint translationInView = [sender translationInView:sender.view];
+//    CGPoint newCenter = CGPointMake(self.center.x + translationInView.x, self.center.y + translationInView.y);
+//    self.center = newCenter;
+//    [sender setTranslation:CGPointZero inView:self];
     
 }
 
