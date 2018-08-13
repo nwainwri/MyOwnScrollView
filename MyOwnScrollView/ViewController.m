@@ -211,7 +211,7 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    self.framingView.bounds = CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height);
+//    self.framingView.bounds = CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height);
     
 }
 

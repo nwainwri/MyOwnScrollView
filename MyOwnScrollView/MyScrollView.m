@@ -30,7 +30,7 @@
 //Note: We implemented the basics of UIScrollView but there is a lot more to the real UIScrollView than just this. Momentum scrolling, bouncing, scroll indicators, zooming, and delegate methods are just some of the features we have not implemented here.
 // need to add custom init to 'turn on' the pangesture
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame {// passes in UIView -- current frame -- for reference; so that it inits that frame with the gesture method called
     self = [super initWithFrame:frame];
     if (self) {
         // init pan gesture here
@@ -43,9 +43,11 @@
 
 - (void)frameViewPanned:(UIPanGestureRecognizer *)sender {
     CGPoint translationInView = [sender translationInView:sender.view];
-    CGPoint oldCenter = sender.view.center;
-    CGPoint newCenter = CGPointMake(oldCenter.x + translationInView.x, oldCenter.y + translationInView.y);
-    sender.view.center = newCenter;
+    CGPoint newCenter = CGPointMake(self.center.x + translationInView.x, self.center.y + translationInView.y);
+    self.center = newCenter;
+    
+    [sender setTranslation:CGPointZero inView:self];
+//    sender.view.center = CGPointMake(translationInView.x, translationInView.y);
 }
 
 /*
