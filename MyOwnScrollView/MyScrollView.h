@@ -12,6 +12,8 @@
 
 @property CGSize contentSize;
 
+@property UIPanGestureRecognizer *scrollyScroll;
+
 
 
 

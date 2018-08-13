@@ -25,24 +25,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //create object of scroll view.....
-    MyScrollView *framingView = [[MyScrollView alloc] initWithFrame:self.view.frame];    
+//  create object of scroll view.....
+    MyScrollView *framingView = [[MyScrollView alloc] initWithFrame:self.view.frame];
     framingView.userInteractionEnabled = YES;
     framingView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:framingView];
     self.framingView = framingView;
 
-    
-    
 //  A red UIView at (20,20) x, y coordinates and with width 100 and height 100
     UIView *redBox = [[UIView alloc] initWithFrame:CGRectZero];
     redBox.translatesAutoresizingMaskIntoConstraints = NO;
     redBox.backgroundColor = [UIColor orangeColor];
     [self.framingView addSubview:redBox];
     
-//     toItem:nil
-//     attribute:NSLayoutAttributeNotAnAttribute
-//     https://developer.apple.com/documentation/uikit/nslayoutattribute/nslayoutattributenotanattribute
+//  toItem:nil
+//  attribute:NSLayoutAttributeNotAnAttribute
+//  https://developer.apple.com/documentation/uikit/nslayoutattribute/nslayoutattributenotanattribute
     
 //  HEIGHT
     [NSLayoutConstraint constraintWithItem:redBox
@@ -53,7 +51,7 @@
                                 multiplier:1
                                   constant:100].active = YES;
     
-    //WIDTH
+//    WIDTH
     [NSLayoutConstraint constraintWithItem:redBox
                                  attribute:NSLayoutAttributeWidth
                                  relatedBy:NSLayoutRelationEqual
@@ -62,7 +60,7 @@
                                 multiplier:1
                                   constant:100].active = YES;
     
-    //RIGHT EDGE
+//    RIGHT EDGE
     [NSLayoutConstraint constraintWithItem:redBox
                                  attribute:NSLayoutAttributeLeft
                                  relatedBy:NSLayoutRelationEqual
@@ -71,7 +69,7 @@
                                 multiplier:1
                                   constant:20].active = YES;
     
-    //TOP EDGE
+//    TOP EDGE
     [NSLayoutConstraint constraintWithItem:redBox
                                  attribute:NSLayoutAttributeTop
                                  relatedBy:NSLayoutRelationEqual
@@ -86,7 +84,7 @@
     greenBox.backgroundColor = [UIColor greenColor];
     [self.framingView addSubview:greenBox];
     
-    //HEIGHT
+//    HEIGHT
     [NSLayoutConstraint constraintWithItem:greenBox
                                  attribute:NSLayoutAttributeHeight
                                  relatedBy:NSLayoutRelationEqual
@@ -95,7 +93,7 @@
                                 multiplier:1
                                   constant:150].active = YES;
     
-    //WIDTH
+//    WIDTH
     [NSLayoutConstraint constraintWithItem:greenBox
                                  attribute:NSLayoutAttributeWidth
                                  relatedBy:NSLayoutRelationEqual
@@ -104,7 +102,7 @@
                                 multiplier:1
                                   constant:200].active = YES;
     
-    //RIGHT EDGE
+//    RIGHT EDGE
     [NSLayoutConstraint constraintWithItem:greenBox
                                  attribute:NSLayoutAttributeLeft
                                  relatedBy:NSLayoutRelationEqual
@@ -113,7 +111,7 @@
                                 multiplier:1
                                   constant:150].active = YES;
     
-    //TOP EDGE
+//    TOP EDGE
     [NSLayoutConstraint constraintWithItem:greenBox
                                  attribute:NSLayoutAttributeTop
                                  relatedBy:NSLayoutRelationEqual
@@ -129,7 +127,7 @@
     blueBox.backgroundColor = [UIColor blueColor];
     [self.framingView addSubview:blueBox];
     
-    //HEIGHT
+//    HEIGHT
     [NSLayoutConstraint constraintWithItem:blueBox
                                  attribute:NSLayoutAttributeHeight
                                  relatedBy:NSLayoutRelationEqual
@@ -138,7 +136,7 @@
                                 multiplier:1
                                   constant:200].active = YES;
     
-    //WIDTH
+//    WIDTH
     [NSLayoutConstraint constraintWithItem:blueBox
                                  attribute:NSLayoutAttributeWidth
                                  relatedBy:NSLayoutRelationEqual
@@ -147,7 +145,7 @@
                                 multiplier:1
                                   constant:150].active = YES;
     
-    //RIGHT EDGE
+//    RIGHT EDGE
     [NSLayoutConstraint constraintWithItem:blueBox
                                  attribute:NSLayoutAttributeLeft
                                  relatedBy:NSLayoutRelationEqual
@@ -156,7 +154,7 @@
                                 multiplier:1
                                   constant:40].active = YES;
     
-    //TOP EDGE
+//    TOP EDGE
     [NSLayoutConstraint constraintWithItem:blueBox
                                  attribute:NSLayoutAttributeTop
                                  relatedBy:NSLayoutRelationEqual
@@ -173,7 +171,7 @@
     yellowBox.backgroundColor = [UIColor yellowColor];
     [self.framingView addSubview:yellowBox];
     
-    //HEIGHT
+//    HEIGHT
     [NSLayoutConstraint constraintWithItem:yellowBox
                                  attribute:NSLayoutAttributeHeight
                                  relatedBy:NSLayoutRelationEqual
@@ -182,7 +180,7 @@
                                 multiplier:1
                                   constant:180].active = YES;
     
-    //WIDTH
+//    WIDTH
     [NSLayoutConstraint constraintWithItem:yellowBox
                                  attribute:NSLayoutAttributeWidth
                                  relatedBy:NSLayoutRelationEqual
@@ -191,7 +189,7 @@
                                 multiplier:1
                                   constant:150].active = YES;
     
-    //RIGHT EDGE
+//    RIGHT EDGE
     [NSLayoutConstraint constraintWithItem:yellowBox
                                  attribute:NSLayoutAttributeLeft
                                  relatedBy:NSLayoutRelationEqual
@@ -200,7 +198,7 @@
                                 multiplier:1
                                   constant:00].active = YES;
     
-    //TOP EDGE
+//    TOP EDGE
     [NSLayoutConstraint constraintWithItem:yellowBox
                                  attribute:NSLayoutAttributeTop
                                  relatedBy:NSLayoutRelationEqual
@@ -217,18 +215,9 @@
     
 }
 
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    
-//    self.view.frame = CGRectMake(0, 44, 320, 416);
-//    [super viewWillAppear:animated];
-//}
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end
