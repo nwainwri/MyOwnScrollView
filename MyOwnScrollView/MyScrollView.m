@@ -45,9 +45,8 @@
     CGPoint translationInView = [sender translationInView:sender.view];
     CGPoint newCenter = CGPointMake(self.center.x + translationInView.x, self.center.y + translationInView.y);
     self.center = newCenter;
-    
     [sender setTranslation:CGPointZero inView:self];
-//    sender.view.center = CGPointMake(translationInView.x, translationInView.y);
+    
 }
 
 /*
