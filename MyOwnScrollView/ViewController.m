@@ -11,7 +11,7 @@
 
 @interface ViewController ()
 
-@property (nonatomic, weak) UIView *framingView;
+@property (nonatomic, weak) MyScrollView *framingView;
 
 @property (nonatomic, weak) UIView *redBox;
 @property (nonatomic, weak) UIView *greenBox;
@@ -28,6 +28,20 @@
 //  create object of scroll view.....
     MyScrollView *framingView = [[MyScrollView alloc] initWithFrame:self.view.frame];
     framingView.userInteractionEnabled = YES;
+//    CGFloat maxHeight = self.yellowBox.frame.origin.y + self.yellowBox.frame.size.height; // needs to be 180 yellow height, with yellow y
+    
+    
+    CGFloat maxHeight = 785;
+    CGFloat maxWidth = 355;
+    framingView.contentSize = CGSizeMake(maxWidth, maxHeight);
+    
+    
+//    framingView.contentSize = CGSizeMake(self.view.frame.size.width, maxHeight);
+//
+//    CGFloat maxHeight = 600 + self.yellowBox.frame.size.height;
+//    NSLog(@"YELLOW BOX ORIGIN [%f] YELLOW BOX HEIGHT[%@]", self.yellowBox.frame.origin.y, self.yellowBox.frame.size.height);
+    
+    
     framingView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:framingView];
     self.framingView = framingView;
@@ -170,6 +184,7 @@
     yellowBox.translatesAutoresizingMaskIntoConstraints = NO;
     yellowBox.backgroundColor = [UIColor yellowColor];
     [self.framingView addSubview:yellowBox];
+    self.yellowBox = yellowBox;
     
 //    HEIGHT
     [NSLayoutConstraint constraintWithItem:yellowBox
@@ -206,13 +221,30 @@
                                  attribute:NSLayoutAttributeTop
                                 multiplier:1
                                   constant:600].active = YES;
+    
+    
+    
+    
+//    CGFloat maxHeight = self.yellowBox.frame.origin.y + self.yellowBox.frame.size.height; // needs to be 180 yellow height, with yellow y
+//    self.framingView.contentSize = CGSizeMake(self.view.frame.size.width, maxHeight);
+
+    
+    
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
 //    self.framingView.bounds = CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height);
+
+}
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
     
+//    CGFloat maxHeight = self.yellowBox.frame.origin.y + self.yellowBox.frame.size.height; // needs to be 180 yellow height, with yellow y
+//    self.framingView.contentSize = CGSizeMake(self.view.frame.size.width, maxHeight);
 }
 
 - (void)didReceiveMemoryWarning {
